@@ -51,14 +51,14 @@ if [ "${args[0]}" == "web" ]; then
     idir="-I ../../depends/nksdk/nklibs -I ../../depends/stb"
     libs="-s WASM=1 -s USE_SDL=2 -s USE_SDL_MIXER=2 -s USE_OGG=1 -s USE_VORBIS=1 -s USE_FREETYPE=1 -s MIN_WEBGL_VERSION=2 -s MAX_WEBGL_VERSION=2 -lidbfs.js"
     cflg="-std=c++14"
-    lflg=$"--preload-file ../../assets -s EXPORTED_FUNCTIONS=_main,_main_callback -s EXPORTED_RUNTIME_METHODS=ccall -s ALLOW_MEMORY_GROWTH"
+    lflg=$"--preload-file ../../assets -s ALLOW_MEMORY_GROWTH"
 
     if [ ! -d "../../binary/web" ];
         then mkdir -p "../../binary/web"
     fi
 
     cd "../../binary/web"
-    emcc $libs $idir $cflg $lflg $defs ../../source/application.cpp -o game.html
+    emcc $libs $idir $cflg $lflg $defs ../../source/application.cpp -o grow.html
 
     echo "----------------------------------------"
 
