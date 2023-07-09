@@ -10,7 +10,7 @@ INTERNAL constexpr nkF32 PANNING_SPEED = 10.00f * TILE_WIDTH;
 INTERNAL constexpr nkF32 ZOOMING_SPEED =  0.07f;
 
 INTERNAL constexpr nkF32 CAMERA_START_ZOOM       = 0.50f;
-INTERNAL constexpr nkF32 CAMERA_MIN_ZOOM         = 0.25f;
+INTERNAL constexpr nkF32 CAMERA_MIN_ZOOM         = 0.16f;
 INTERNAL constexpr nkF32 CAMERA_MAX_ZOOM         = 1.00f;
 INTERNAL constexpr nkF32 CAMERA_ZOOM_SENSITIVITY = 0.15f;
 INTERNAL constexpr nkF32 CAMERA_ZOOM_SPEED       = 12.0f;
