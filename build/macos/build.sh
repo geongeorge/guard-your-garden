@@ -4,8 +4,8 @@ if [ "${args[0]}" == "macos" ]; then
     echo "----------------------------------------"
 
     defs="-D BUILD_NATIVE"
-    idir="-I ../../depends/sdl/macos/SDL2.framework/Headers -I ../../depends/sdl_mixer/macos/SDL2_mixer.framework/Headers -I ../../depends/freetype/macos/include -I ../../depends/nksdk/nklibs -I ../../depends/glew/include -I ../../depends/glew/source -I ../../depends/stb"
-    ldir="-F ../../depends/sdl/macos -F ../../depends/sdl_mixer/macos -L ../../depends/freetype/macos/lib"
+    idir="-I ../../depends/sdl/macos/SDL2.framework/Headers -I ../../depends/sdl_mixer/macos/SDL2_mixer.framework/Headers -I ../../depends/freetype-2/include -I ../../depends/nksdk/nklibs -I ../../depends/glew/include -I ../../depends/glew/source -I ../../depends/stb"
+    ldir="-F ../../depends/sdl/macos -F ../../depends/sdl_mixer/macos -L ../../depends/freetype-2/objs/.libs"
     libs="-framework OpenGL -framework SDL2 -framework SDL2_mixer -lz -lbz2 -lfreetype"
     cflg="-std=c++14 -rpath @executable_path/Frameworks -Wall -Wno-missing-braces -Wno-unused-function -g" # @Incomplete: Always generating symbols right now...
     lflg="-fsanitize=address"
